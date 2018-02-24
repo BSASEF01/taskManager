@@ -12,6 +12,8 @@ class Task {
     
         var name: String
         let  taskInComplted =  true
+        
+    
      //  let taskInComplted = false
         
         init(name: String){

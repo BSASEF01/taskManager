@@ -35,7 +35,7 @@ let currentDate = Date()
 
 let calendar = Calendar.current
 
-let twoWeeksFromNow = calendar.date(byAdding: .day, value: 14, to: currentDate)
+let twodaysFromNow = calendar.date(byAdding: .day, value: 14, to: currentDate)
 
 let dateFormatter = DateFormatter()
 dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
@@ -46,13 +46,13 @@ dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
 
 func mainMenu(){
     print("""
-    to add a game, type 'add'
+    to add a task, type 'add'
     
-    to remove a game, type 'remove'
+    to remove a task, type 'remove'
     
-    "to check a game in, type 'check    in'
+    "to check a task in, type 'completed'
     
-    "to check a game out, type 'check   out'
+    "to check a task out, type 'Incompleted'
 """)
     
     let userInput = readLine()!
@@ -65,7 +65,7 @@ func mainMenu(){
         
     } else if userInput == "InComplted "{
         Incomplted()
-    } else if userInput == "complated"{
+    } else if userInput == "complted"{
         complted()
     } else {
         mainMenu()

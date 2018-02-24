@@ -21,7 +21,7 @@ Task  was cvarlated /removed on:
 The Task is due on:
 
 """)
-    print(dateFormatter.string(from: twoWeeksFromNow!))
+    print(dateFormatter.string(from: twodaysFromNow!))
     
 }
 
@@ -43,20 +43,20 @@ Would you like to quit the program? type yes or no
     }
 }
 
-//game manager functions below
-//func addGameFirst() {
-//    print("Which game would you like to add?")
-//    var userInput = VideoGame(name: readLine()!)
-//    videoGameLibrary.append(userInput)
-//    print("Game added")
-//    mainMenu()
-//}
 
-func addTask() {
-    print("Which game would you like to add?")
+ func addTaskFrist() {
+    print("Which task would you like to add?")
     var userInput = Task(name: readLine()!)
     taskManager.append(userInput)
-    print("Game added on")
+    print("Task added")
+    mainMenu()
+}
+
+func addTask() {
+    print("Which task would you like to add?")
+    var userInput = Task(name: readLine()!)
+    taskManager.append(userInput)
+    print("task added on")
     print(dateFormatter.string(from: currentDate))
     quitProgram()
     mainMenu()
@@ -92,7 +92,7 @@ func removeTask() {
 
 
 func Incomplted() {
-    print("Which game would you like to check in? type the number which corresponds with your certain game. Last time you checked out ")
+    print("Which task would you like to Incomplted?")
     for (n, c) in taskManager.enumerated() {
         if c.taskInComplted == true {
             print("\(n): '\(c.name)'")
@@ -118,7 +118,7 @@ func Incomplted() {
 func complted (){
     print("Which Task would you like to complted?")
     for (n, c) in taskManager.enumerated() {
-        if c.taskInComplted == true {
+        if c.taskInComplted == false{
             print("\(n): '\(c.name)'")
         }
     }
@@ -128,7 +128,7 @@ func complted (){
             print("Enter a valid number please")
             complted()
         } else {
-            taskManager[userInput].Complted = true
+            taskManager[userInput].taskInComplted == false
             dateOut()
             quitProgram()
             mainMenu()
