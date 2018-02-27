@@ -12,7 +12,7 @@ import Foundation
 func dateOut(){
     print("""
 
-Task  was cvarlated /removed on:
+Task  was removed on:
 
 """)
     print(dateFormatter.string(from: currentDate))
@@ -53,7 +53,8 @@ Would you like to quit the program? type yes or no
 }
 
 func addTask() {
-    print("Which task would you like to add?")
+    
+   print("Which task would you like to add?")
     var userInput = Task(name: readLine()!)
     taskManager.append(userInput)
     print("task added on")
@@ -74,7 +75,12 @@ func removeTask() {
     }
     let userInput = Int(readLine()!)
     if let userInput = userInput {
-        if  userInput > taskManager.count - 1 {
+        if userInput > 0 {
+            print("Please enter a valid number")
+        }
+        
+    
+        if  userInput > taskManager.count - 1  {
             print("Please enter a valid number")
             removeTask()
         } else {
@@ -115,7 +121,7 @@ func Incomplted() {
 }
 
 
-func complted (){
+func complted () {
     print("Which Task would you like to complted?")
     for (n, c) in taskManager.enumerated() {
         if c.taskInComplted == false{
@@ -139,5 +145,12 @@ func complted (){
         complted()
     }
 }
+
+
+
+
+
+
+
 
 

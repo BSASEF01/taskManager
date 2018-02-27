@@ -44,15 +44,15 @@ dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
 
 // mainmanu
 
-func mainMenu(){
+func mainMenu() {
     print("""
-    to add a task, type 'add'
+    to add a task, type 'addTask'
     
-    to remove a task, type 'remove'
+    to remove a task, type 'removeTask'
     
-    "to check a task in, type 'completed'
+    "to check a task in, type 'completedTask'
     
-    "to check a task out, type 'Incompleted'
+    "to check a task out, type 'IncompletedTAsk'
 """)
     
     let userInput = readLine()!
@@ -75,6 +75,7 @@ func mainMenu(){
 }
 
 
+mainMenu()
 
 
 
