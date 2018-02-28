@@ -9,8 +9,9 @@
 import Foundation
 
 class Task {
-    
+        //Missing properties for the duedate and task desription
         var name: String
+        //Good idea making this true
         let  taskInComplted =  true
         
     
