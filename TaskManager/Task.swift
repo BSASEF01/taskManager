@@ -14,7 +14,7 @@ class Task {
         let  taskInComplted =  true
         
     
-     //  let taskInComplted = false
+    
         
         init(name: String){
             self.name = name

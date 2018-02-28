@@ -42,17 +42,18 @@ dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
 
 
 
+
 // mainmanu
 
 func mainMenu() {
     print("""
-    to add a task, type 'addTask'
+    1.to add a task, type "addTask"
     
-    to remove a task, type 'removeTask'
+    2.to remove a task, type "removeTask"
     
-    "to check a task in, type 'completedTask'
+   "3.to check a task in, type "completedTask"
     
-    "to check a task out, type 'IncompletedTAsk'
+   "4.to check a task out, type "IncompletedTask"
 """)
     //testing
     let userInput = readLine()!
@@ -63,9 +64,10 @@ func mainMenu() {
     } else if userInput == "removeTask" {
         removeTask()
         
-    } else if userInput == "InComplted "{
+    } else if userInput == "IncompletedTask"
+    {
         Incomplted()
-    } else if userInput == "complted"{
+    } else if userInput == "completedTask"{
         complted()
     } else {
         mainMenu()
