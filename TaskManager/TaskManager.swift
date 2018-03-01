@@ -8,6 +8,7 @@
 
 import Foundation
 
+ 
 
 func dateOut(){
     print("""
@@ -23,6 +24,15 @@ The Task is due on:
 """)
     print(dateFormatter.string(from: twodaysFromNow!))
     
+}
+
+func availabaleTask() {
+    print("Current Task List 🙂 ")
+    print("Number \t Title \t\t Checkin date \t\t\t CheckOut Date")
+    for (index, element) in taskManager.enumerated() {
+        
+    print("\(index). \t \(element.name) \t \(element.taskInComplted) \t \(element.dueDate as Date?))")
+    }
 }
 
 
@@ -46,7 +56,8 @@ Would you like to quit the program? type yes or no
 
  func addTaskFrist() {
     print("Which task would you like to add?")
-    var userInput = Task(name: readLine()!)
+    let date = Date()
+    let userInput = Task(name: readLine()!, dueDate: date)
     taskManager.append(userInput)
     print("Task added")
     mainMenu()
@@ -55,7 +66,8 @@ Would you like to quit the program? type yes or no
 func addTask() {
     
    print("Which task would you like to add?")
-    var userInput = Task(name: readLine()!)
+    let date = Date()
+    var userInput = Task(name: readLine()!, dueDate: date)
     taskManager.append(userInput)
     print("task added on")
     print(dateFormatter.string(from: currentDate))

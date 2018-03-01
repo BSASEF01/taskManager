@@ -9,16 +9,19 @@
 import Foundation
 
 class Task {
-        //Missing properties for the duedate and task desription
         var name: String
-        //Good idea making this true
-        let  taskInComplted =  true
+        
+        var  taskInComplted =  true
+    var dueDate: Date
         
     
     
+    
         
-        init(name: String){
+    init(name: String, dueDate: Date){
             self.name = name
+        self.dueDate = dueDate
+        
         }
         
         

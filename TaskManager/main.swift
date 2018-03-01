@@ -42,8 +42,28 @@ dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
 
 
 
-//Missing options to list all tasks, list only completed tasks, and list only incomplete tasks
-//Also might be nice to have the option to quit from the main menu
+
+let weekdaySet = IndexSet([1, 2, 4, 7])
+
+
+let dueDate = Calendar.current
+var weekday =  calendar.component(.weekday, from: Date())
+
+
+if let nextWeekday = weekdaySet.integerGreaterThan(weekday) {
+    weekday = nextWeekday
+} else {
+    weekday = weekdaySet.first!
+}
+
+
+let components = DateComponents(weekday: weekday)
+calendar.nextDate(after: Date(), matching: components, matchingPolicy: .nextTime)
+
+
+
+
+
 
 func mainMenu() {
     print("""
@@ -54,8 +74,10 @@ func mainMenu() {
    "3.to check a task in, type "completedTask"
     
    "4.to check a task out, type "IncompletedTask"
+
+    5. to qiut a task, type "qiutTask"
 """)
-    //testing
+  
     let userInput = readLine()!
     
     if userInput == "addTask"{
@@ -64,33 +86,19 @@ func mainMenu() {
     } else if userInput == "removeTask" {
         removeTask()
         
-    } else if userInput == "IncompletedTask"
-    {
-        Incomplted()
     } else if userInput == "completedTask"{
+    
+        Incomplted()
+    } else if userInput == "IncompletedTask"{
         complted()
-    } else {
-        mainMenu()
-    }
+     mainMenu()
+   
+}
     
-    
+
 }
 
-
 mainMenu()
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
