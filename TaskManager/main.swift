@@ -30,7 +30,7 @@ import Foundation
 
  */
 
-//This is good but we might want the due date to be assigned when we make a task. There are a couple reasons why we would want to change it. First, we wont have the due date tied to the task as it is currently. It would be nice to be able to access a date property from inside our task object. Second, if we leave this program running for a few days it will still be saying the date is two weeks from when we started the program.
+
 let currentDate = Date()
 
 let calendar = Calendar.current
