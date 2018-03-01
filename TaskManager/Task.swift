@@ -12,13 +12,14 @@ class Task {
         var name: String
         
         var  taskInComplted =  true
-    var dueDate: Date
+        var dueDate: Date
+        var  taskComplted = false
         
     
     
     
         
-    init(name: String, dueDate: Date){
+    init(name: String, dueDate: Date) {
             self.name = name
         self.dueDate = dueDate
         

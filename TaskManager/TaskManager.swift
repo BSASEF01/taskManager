@@ -26,7 +26,16 @@ The Task is due on:
     
 }
 
-func availabaleTask() {
+
+
+
+
+
+
+
+
+
+func availabaleTasks() {
     print("Current Task List 🙂 ")
     print("Number \t Title \t\t Checkin date \t\t\t CheckOut Date")
     for (index, element) in taskManager.enumerated() {
@@ -34,6 +43,7 @@ func availabaleTask() {
     print("\(index). \t \(element.name) \t \(element.taskInComplted) \t \(element.dueDate as Date?))")
     }
 }
+
 
 
 func quitProgram() {
@@ -73,6 +83,21 @@ func addTask() {
     print(dateFormatter.string(from: currentDate))
     quitProgram()
     mainMenu()
+}
+
+func checkcompletedTask() {
+for task in taskManager {
+        if task.taskInComplted {
+            print(task.name)
+        }
+    }
+}
+func checkIncompletedTask() {
+    for task in taskManager {
+    if task.taskComplted {
+        print(task.name)
+    }
+}
 }
 
 
@@ -157,13 +182,5 @@ func complted () {
         complted()
     }
 }
-
-
-
-
-
-
-
-
 
 
