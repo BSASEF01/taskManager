@@ -28,7 +28,7 @@ class Task {
         
     }
 
-var taskManager = [Task]()
+
     
     
     

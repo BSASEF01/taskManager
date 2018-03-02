@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+var taskManager = [Task]()
+
+
+
+
+
+

@@ -91,13 +91,16 @@ for task in taskManager {
             print(task.name)
         }
     }
+quitProgram()
+
 }
 func checkIncompletedTask() {
     for task in taskManager {
-    if task.taskComplted {
+    if !task.taskComplted {
         print(task.name)
     }
 }
+quitProgram()
 }
 
 

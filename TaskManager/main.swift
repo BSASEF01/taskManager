@@ -80,8 +80,10 @@ func mainMenu() {
     6.to see a IncompletedTask, type "checkIncompletedTask"
     
     7.to see a IncompletedTask and completedTask, type "Both"
+    
+    8. to see a availabaleTasks, type "availabaleTasks"
 
-    8.to qiut a task, type "qiutTask"
+    9.to qiut a task, type "qiutTask"
 """)
   
     let userInput = readLine()!
@@ -105,16 +107,17 @@ func mainMenu() {
         checkcompletedTask()
     }else if userInput == "checkIncompletedTask" {
        checkIncompletedTask()
+    
+        
+    }else if userInput == "availabaleTasks"{
+          availabaleTasks()
     }
-    
-    
-        
-        
-        
-        mainMenu()
    
+    
+  mainMenu()
+  
+        
 }
-
 
 
 
