@@ -10,15 +10,11 @@ import Foundation
 
 class Task {
         var name: String
-        
         var  taskInComplted =  true
         var dueDate: Date
         var  taskComplted = false
         
     
-    
-    
-        
     init(name: String, dueDate: Date) {
             self.name = name
         self.dueDate = dueDate
@@ -29,8 +25,3 @@ class Task {
     }
 
 
-
-
-    
-    
-    

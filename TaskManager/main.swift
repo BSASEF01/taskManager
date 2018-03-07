@@ -41,10 +41,7 @@ let dateFormatter = DateFormatter()
 dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
 
 
-
-
 let weekdaySet = IndexSet([1, 2, 4, 7])
-
 
 let dueDate = Calendar.current
 var weekday =  calendar.component(.weekday, from: Date())
@@ -67,49 +64,49 @@ calendar.nextDate(after: Date(), matching: components, matchingPolicy: .nextTime
 
 func mainMenu() {
     print("""
-    1.to add a task, type "addTask"
+    1.To add a task, type "add"
     
-    2.to remove a task, type "removeTask"
+    2.To remove a task, type "remove"
     
-   "3.to check a task in, type "completedTask"
+    3.To check a  task in, type "completed"
     
-   "4.to check a task out, type "IncompletedTask"
+    4.To check a task out, type "Incompleted"
 
-    5.to see a completedTask, type "checkcompletedTask"
+    5.To see a completedTask, type "printcompletedTask"
    
-    6.to see a IncompletedTask, type "checkIncompletedTask"
+    6.To see a IncompletedTask, type "printIncompletedTask"
     
-    7.to see a IncompletedTask and completedTask, type "Both"
+    7.To see a IncompletedTask and completedTask, type "Both"
     
-    8. to see a availabaleTasks, type "availabaleTasks"
+    8.To see a availabaleTasks, type "checkavailableTasks"
 
-    9.to qiut a task, type "qiutTask"
+    9.To qiut a task, type "qiutTask"
 """)
   
     let userInput = readLine()!
     
-    if userInput == "addTask"{
+    if userInput == "add"{
         addTask()
         
-    } else if userInput == "removeTask" {
+    } else if userInput == "remove" {
         removeTask()
         
-    } else if userInput == "completedTask"{
+    } else if userInput == "completed"{
     
         Incomplted()
-    } else if userInput == "IncompletedTask"{
+    } else if userInput == "Incompleted"{
         complted()
      
     }else if userInput == "Both"{
        availabaleTasks()
 
-    }else if userInput == "checkcompletedTask" {
+    }else if userInput == "printcompletedTask" {
         checkcompletedTask()
-    }else if userInput == "checkIncompletedTask" {
+    
+    }else if userInput == "printIncompletedTask" {
        checkIncompletedTask()
     
-        
-    }else if userInput == "availabaleTasks"{
+    }else if userInput == "checkavailableTasks"{
           availabaleTasks()
     }
    

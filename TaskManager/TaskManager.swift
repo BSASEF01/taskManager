@@ -27,14 +27,6 @@ The Task is due on:
 }
 
 
-
-
-
-
-
-
-
-
 func availabaleTasks() {
     print("Current Task List 🙂 ")
     print("Number \t Title \t\t Checkin date \t\t\t CheckOut Date")
@@ -42,6 +34,7 @@ func availabaleTasks() {
         
     print("\(index). \t \(element.name) \t \(element.taskInComplted) \t \(element.dueDate as Date?))")
     }
+      quitProgram()
 }
 
 
